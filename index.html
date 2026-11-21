@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sathya sheelan J — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .cyber-grid-bg {
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid-pattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3e%3cpath d='M 80 0 L 0 0 0 80' fill='none' stroke='rgb(34 211 238 / 0.08)' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid-pattern)'/%3e%3c/svg%3e");
+    }
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.06); }
+    }
+    .animate-pulse-slow {
+      animation: pulse-slow 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-black text-white relative overflow-x-hidden selection:bg-cyan-400/30 selection:text-cyan-200">
+  <div class="fixed inset-0 cyber-grid-bg pointer-events-none -z-20"></div>
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="absolute -top-24 left-1/4 w-80 h-80 sm:w-[28rem] sm:h-[28rem] rounded-full bg-cyan-500/20 blur-3xl animate-pulse-slow"></div>
+    <div class="absolute top-1/3 right-1/4 w-80 h-80 sm:w-[30rem] sm:h-[30rem] rounded-full bg-purple-600/20 blur-3xl animate-pulse-slow" style="animation-delay: 2.5s;"></div>
+    <div class="absolute bottom-8 left-1/3 w-72 h-72 sm:w-[26rem] sm:h-[26rem] rounded-full bg-cyan-400/15 blur-3xl animate-pulse-slow" style="animation-delay: 4s;"></div>
+  </div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-lg border-b border-cyan-400/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#about" class="flex items-center gap-2.5">
+        <span class="p-2 rounded-lg bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs font-bold">&gt;_</span>
+        <span class="font-bold tracking-wide text-base sm:text-lg bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          Sathya sheelan J
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-2 text-sm font-medium text-gray-300">
+        <a href="#about" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">About</a>
+        <a href="#journey" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Journey</a>
+        <a href="#career" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Career</a>
+        <a href="#ethics" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Ethics</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Contact</a>
+      </nav>
+
+      <button id="menu-btn" type="button" aria-label="Toggle menu" class="md:hidden px-3 py-2 rounded-lg bg-white/5 border border-cyan-400/25 text-cyan-400 font-mono text-sm">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border-b border-cyan-400/20 px-4 py-3 space-y-1 text-sm text-gray-300">
+      <a href="#about" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">About</a>
+      <a href="#journey" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Journey</a>
+      <a href="#career" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Career</a>
+      <a href="#ethics" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Ethics</a>
+      <a href="#contact" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="pt-28 sm:pt-36 pb-20">
+      <div class="relative group">
+        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500/25 via-purple-500/25 to-cyan-500/25 blur-lg opacity-60 pointer-events-none"></div>
+        <div class="relative rounded-2xl bg-black/70 backdrop-blur-lg border border-cyan-400/25 p-6 sm:p-10 lg:p-12 shadow-2xl">
+          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-300 text-xs sm:text-sm font-medium mb-6">
+            <span>DevOps • AI &amp; ML • Continuous Learner • Chennai, India</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
+            Sathya sheelan J
+          </h1>
+
+          <div class="space-y-4 text-gray-200 text-base sm:text-lg leading-relaxed
