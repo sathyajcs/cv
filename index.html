@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sathya sheelan J — Portfolio</title>
+  <title>Sathya Sheelan J — System &amp; DevOps Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html {
@@ -13,8 +13,8 @@
       background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid-pattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3e%3cpath d='M 80 0 L 0 0 0 80' fill='none' stroke='rgb(34 211 238 / 0.08)' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid-pattern)'/%3e%3c/svg%3e");
     }
     @keyframes pulse-slow {
-      0%, 100% { opacity: 0.25; transform: scale(1); }
-      50% { opacity: 0.45; transform: scale(1.06); }
+      0%, 100% { opacity: 0.22; transform: scale(1); }
+      50% { opacity: 0.42; transform: scale(1.05); }
     }
     .animate-pulse-slow {
       animation: pulse-slow 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -22,6 +22,7 @@
   </style>
 </head>
 <body class="min-h-screen bg-black text-white relative overflow-x-hidden selection:bg-cyan-400/30 selection:text-cyan-200">
+  <!-- Background Grid & Ambient Neon Glows -->
   <div class="fixed inset-0 cyber-grid-bg pointer-events-none -z-20"></div>
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
     <div class="absolute -top-24 left-1/4 w-80 h-80 sm:w-[28rem] sm:h-[28rem] rounded-full bg-cyan-500/20 blur-3xl animate-pulse-slow"></div>
@@ -29,346 +30,320 @@
     <div class="absolute bottom-8 left-1/3 w-72 h-72 sm:w-[26rem] sm:h-[26rem] rounded-full bg-cyan-400/15 blur-3xl animate-pulse-slow" style="animation-delay: 4s;"></div>
   </div>
 
-  <header class="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-lg border-b border-cyan-400/20">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-cyan-400/20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#about" class="flex items-center gap-2.5">
-        <span class="p-2 rounded-lg bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 font-mono text-xs font-bold">&gt;_</span>
+        <span class="px-2.5 py-1 rounded-lg bg-cyan-400/10 border border-cyan-400/35 text-cyan-400 font-mono text-xs font-bold">0xSJ</span>
         <span class="font-bold tracking-wide text-base sm:text-lg bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-          Sathya sheelan J
+          Sathya Sheelan J
         </span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-2 text-sm font-medium text-gray-300">
-        <a href="#about" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">About</a>
-        <a href="#journey" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Journey</a>
-        <a href="#career" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Career</a>
-        <a href="#ethics" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Ethics</a>
-        <a href="#contact" class="px-4 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Contact</a>
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-gray-300">
+        <a href="#about" class="px-3.5 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">About</a>
+        <a href="#stack" class="px-3.5 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Stack</a>
+        <a href="#experience" class="px-3.5 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Experience</a>
+        <a href="#credentials" class="px-3.5 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Credentials</a>
+        <a href="#contact" class="px-3.5 py-2 rounded-lg hover:text-cyan-400 hover:bg-white/5 transition-colors">Contact</a>
       </nav>
 
-      <button id="menu-btn" type="button" aria-label="Toggle menu" class="md:hidden px-3 py-2 rounded-lg bg-white/5 border border-cyan-400/25 text-cyan-400 font-mono text-sm">
+      <button id="menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden px-3 py-2 rounded-lg bg-white/5 border border-cyan-400/25 text-cyan-400 font-mono text-sm">
         ☰
       </button>
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border-b border-cyan-400/20 px-4 py-3 space-y-1 text-sm text-gray-300">
       <a href="#about" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">About</a>
-      <a href="#journey" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Journey</a>
-      <a href="#career" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Career</a>
-      <a href="#ethics" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Ethics</a>
+      <a href="#stack" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Stack</a>
+      <a href="#experience" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Experience</a>
+      <a href="#credentials" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Credentials</a>
       <a href="#contact" class="block px-4 py-2.5 rounded-lg hover:text-cyan-400 hover:bg-white/5">Contact</a>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <section id="about" class="pt-28 sm:pt-36 pb-20">
+    <!-- HERO / ABOUT -->
+    <section id="about" class="pt-28 sm:pt-36 pb-16">
       <div class="relative group">
-        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500/25 via-purple-500/25 to-cyan-500/25 blur-lg opacity-60 pointer-events-none"></div>
-        <div class="relative rounded-2xl bg-black/70 backdrop-blur-lg border border-cyan-400/25 p-6 sm:p-10 lg:p-12 shadow-2xl">
-          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-300 text-xs sm:text-sm font-medium mb-6">
-            <span>DevOps • AI &amp; ML • Continuous Learner • Chennai, India</span>
+        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500/25 via-purple-500/25 to-cyan-500/25 blur-lg opacity-60 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
+        <div class="relative rounded-2xl bg-black/75 backdrop-blur-lg border border-cyan-400/25 p-6 sm:p-10 lg:p-12 shadow-2xl">
+          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-300 font-mono text-xs mb-5">
+            <span>Chennai, India</span>
+            <span>•</span>
+            <span>10+ Years Experience</span>
+            <span>•</span>
+            <span>OpenShift • Linux • Cloud &amp; Automation</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
-            Sathya sheelan J
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-3 bg-gradient-to-r from-cyan-400 via-purple-400 to-purple-500 bg-clip-text text-transparent">
+            Sathya Sheelan J
           </h1>
+          <p class="text-lg sm:text-xl font-mono text-cyan-300 mb-6">
+            System Engineer • DevOps, Cloud Infrastructure &amp; Technical Operations
+          </p>
 
-          <div class="space-y-4 text-gray-200 text-base sm:text-lg leading-relaxed">
-            <p class="text-xl sm:text-2xl font-semibold text-cyan-300">Greetings!</p>
-            <p>
-              I&apos;m a passionate computer science enthusiast based in the vibrant city of
-              <span class="text-cyan-400 font-medium">Chennai</span>.
-            </p>
-            <p>
-              Armed with a degree in computer science engineering, my journey in the tech world has been
-              nothing short of exhilarating. Inspired by
-              <span class="text-purple-300 font-medium">Socrates</span>, who learned a melody on the flute
-              even in the face of adversity, I embrace challenges as opportunities for growth. My
-              commitment extends beyond personal development.
-            </p>
-            <p>
-              Currently immersed in the realms of
-              <span class="text-cyan-400 font-medium">DevOps</span>,
-              <span class="text-purple-400 font-medium">AI</span>, and
-              <span class="text-cyan-400 font-medium">ML</span>, I embody the spirit of continuous
-              learning.
-            </p>
-            <p>
-              Having navigated the intricacies of programming and computer technology through perseverance,
-              I&apos;m dedicated to making the learning process smoother for others. My mission is to
-              share knowledge far and wide, facilitating an environment where learning is both enjoyable
-              and accessible. Join me on this exciting journey as we unravel the wonders of technology
-              together.
-            </p>
-            <p class="pt-2 text-cyan-200 font-medium italic border-l-2 border-cyan-400/50 pl-4">
-              Let&apos;s make the world of computer science a playground for curiosity and collaboration!
-            </p>
+          <p class="text-gray-200 text-base sm:text-lg leading-relaxed max-w-4xl mb-6">
+            Seasoned IT enthusiast with over 10 years of hands-on experience in DevOps, system
+            administration, and technical support. Adept at mastering Linux intricacies, harnessing
+            cloud technologies, and spearheading impactful projects that elevate operational excellence
+            in ever-evolving tech landscapes. By continuously learning and adapting, I build reliable
+            systems and workflows that make customer services seamless and enjoyable.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-white/5 border border-cyan-400/25 text-cyan-200">OpenShift &amp; Kubernetes</span>
+            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-white/5 border border-purple-400/25 text-purple-200">Ansible &amp; Terraform</span>
+            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-white/5 border border-cyan-400/25 text-cyan-200">IBM Cloud &amp; AWS</span>
+            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-white/5 border border-purple-400/25 text-purple-200">Ubuntu, RHEL &amp; Solaris</span>
+            <span class="px-3 py-1 rounded-lg text-xs font-mono bg-white/5 border border-cyan-400/25 text-cyan-200">Python, Go, C, Bash &amp; Ksh</span>
           </div>
 
-          <div class="mt-8 pt-6 border-t border-cyan-400/15">
-            <p class="text-xs uppercase tracking-widest text-gray-400 mb-3 font-mono">Core Stack &amp; Domains</p>
-            <div class="flex flex-wrap gap-2.5">
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">DevOps</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">AI &amp; ML</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">Red Hat &amp; Ubuntu Linux</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">Python</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">Bash</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">Ansible</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">OpenStack</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">IBM Cloud</span>
-              <span class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white/5 border border-cyan-400/25 text-gray-100">Git</span>
-            </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="#experience" class="px-5 py-2.5 rounded-xl font-semibold text-black bg-gradient-to-r from-cyan-400 to-purple-500 hover:opacity-95 transition-all text-sm">
+              Explore Experience
+            </a>
+            <a href="#contact" class="px-5 py-2.5 rounded-xl font-semibold text-cyan-300 bg-white/5 border border-cyan-400/35 hover:bg-cyan-400/10 transition-all text-sm">
+              Contact
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="journey" class="py-20 border-t border-cyan-400/10">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="inline-block px-3 py-1 rounded-full text-xs font-mono uppercase tracking-widest bg-purple-500/15 border border-purple-400/30 text-purple-300 mb-3">
-          Education &amp; Milestones
-        </span>
+    <!-- TECHNICAL SKILLS -->
+    <section id="stack" class="py-16 border-t border-cyan-400/10">
+      <div class="mb-10">
+        <p class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">Technical Skills</p>
         <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          In Pursuit of Knowledge: The Academic Chronicles
+          Core Stack
         </h2>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-        <article class="rounded-2xl bg-white/5 backdrop-blur-md border border-cyan-400/25 p-6 sm:p-7">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-cyan-400/15 border-cyan-400/35 text-cyan-300 mb-4">
-            Sathyabama University
-          </span>
-          <h3 class="text-xl font-bold text-white mb-3">Launching into the World of Wisdom</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            From mastering the intricacies of computer engineering to honing essential life skills, my
-            journey at Sathyabama University was a transformative odyssey. Four years of academic
-            immersion, culminating in a real-time project during the final year, paved the way for my
-            entry into the IT industry.
-          </p>
-        </article>
-
-        <article class="rounded-2xl bg-white/5 backdrop-blur-md border border-yellow-400/35 p-6 sm:p-7">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-yellow-400/15 border-yellow-400/40 text-yellow-300 mb-4">
-            1st Prize • IEEE Forum
-          </span>
-          <h3 class="text-xl font-bold text-white mb-3">Quiz Champion: A Science Quiz Triumph</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            The pinnacle of my academic experience was marked by a notable achievement &mdash; a first prize
-            in a Science quiz conducted by IEEE forum at Sathyabama University.
-          </p>
-        </article>
-
-        <article class="rounded-2xl bg-white/5 backdrop-blur-md border border-purple-400/30 p-6 sm:p-7">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-purple-400/15 border-purple-400/35 text-purple-300 mb-4">
-            Class of 2013 • Resilience
-          </span>
-          <h3 class="text-xl font-bold text-white mb-3">Class of 2013: BE Graduation Unsung Anthem</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            In the dynamic tapestry of my academic journey, the Class of 2013 holds a unique melody. As a
-            shy, reserved introvert, wearing the cloak of determination on the graduation day, I navigated
-            challenges throughout my university years. The path to graduation didn&apos;t unfold in the
-            traditional ceremony. Yet, within this unconventional tale lies a testament to tenacity and
-            resilience. In the year 2013, armed with a degree earned through persistence, I stepped into
-            the vast realms of Information Technology, proving that success, though delayed, is ultimately
-            inevitable.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="career" class="py-20 border-t border-cyan-400/10">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-block px-3 py-1 rounded-full text-xs font-mono uppercase tracking-widest bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 mb-3">
-          2014 – Present
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          Chasing Expertise: The Professional Odyssey
-        </h2>
-      </div>
-
-      <div class="space-y-8">
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-cyan-400/25 p-6 sm:p-7">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold border bg-cyan-400/15 border-cyan-400/35 text-cyan-300">
-              2014 – 2017
-            </span>
-            <span class="text-sm font-semibold text-gray-300">Mindtree LTD</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-1">Embarking on the IT Odyssey</h3>
-          <p class="text-xs sm:text-sm font-medium text-cyan-400 mb-4">Junior System Engineer</p>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            Joining Mindtree LTD in 2014 as Junior System Engineer, I delved into the realm of IT,
-            providing robust support for Linux servers and hosted middlewares, mastering Bash shell
-            scripting, and venturing into the world of Solaris.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-purple-400/30 p-6 sm:p-7">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold border bg-purple-400/15 border-purple-400/35 text-purple-300">
-              2017 – 2022
-            </span>
-            <span class="text-sm font-semibold text-gray-300">Fidelity Investments</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-1">Formalities and Fidelity</h3>
-          <p class="text-xs sm:text-sm font-medium text-purple-300 mb-4">Team FSC &amp; Server Operations</p>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            At Fidelity Investments, I initially contributed to Team FSC, honing formal communication
-            skills and breaking through personal barriers. Transitioning again back to the Server
-            Operations team, I managed Red Hat Linux, delved into OpenStack, and flexed my scripting
-            muscles with Python, Shell scripting, and Ansible automation.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-cyan-400/25 p-6 sm:p-7">
-          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold border bg-cyan-400/15 border-cyan-400/35 text-cyan-300">
-              2022 – Present
-            </span>
-            <span class="text-sm font-semibold text-gray-300">HCL Technologies</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-1">Cloudscape Chronicles at HCL</h3>
-          <p class="text-xs sm:text-sm font-medium text-cyan-400 mb-4">Cloud &amp; Linux Infrastructure</p>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            In 2022, I stepped into HCL Technologies, navigating the intricacies of IBM cloud
-            infrastructure. Armed with Ubuntu Linux prowess, Shell scripting finesse, Python proficiency,
-            and Git wizardry, I continue to shape the digital future.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="ethics" class="py-20 border-t border-cyan-400/10">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="inline-block px-3 py-1 rounded-full text-xs font-mono uppercase tracking-widest bg-purple-500/15 border border-purple-400/30 text-purple-300 mb-3">
-          Principles &amp; Philosophy
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          Values-Driven Professional: Elevating Work with Ethics
-        </h2>
-      </div>
-
-      <div class="rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-cyan-500/10 backdrop-blur-md border border-cyan-400/25 p-6 sm:p-8 lg:p-10 mb-12 space-y-4 text-gray-200 text-base sm:text-lg leading-relaxed">
-        <p>
-          Guided by unwavering ethics, I prioritize
-          <span class="text-cyan-400 font-semibold">honesty and trust</span> over monetary gains.
-        </p>
-        <p>
-          Embracing the belief that
-          <span class="text-purple-300 font-semibold">&ldquo;learning will never go to waste,&rdquo;</span>
-          I foster a culture of continuous learning and knowledge sharing, where insights fuel innovation.
-          In every endeavor, I aim not just for success, but to build a legacy anchored in integrity and
-          sustained by a passion for learning and trust.
-        </p>
-        <blockquote class="pt-2 text-cyan-200 font-medium italic border-l-2 border-purple-400 pl-4">
-          I surely say: &ldquo;I don&apos;t just mention these; I&apos;ve actively embodied these
-          principles throughout my professional journey, turning words into impactful actions.&rdquo;
-        </blockquote>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-cyan-400/25 p-6">
-          <h3 class="text-lg font-bold text-white mb-3">The Harmony of Success: Empathy, Politeness, and Truth</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            &ldquo;Success, to me, is the harmonious blend of empathy, politeness, truthfulness,
-            humility, and honest negotiation&mdash;an unwavering commitment where rudeness has no place.&rdquo;
-          </p>
+        <div class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-cyan-400/25 p-6 hover:border-cyan-400/50 transition-all">
+          <h3 class="text-sm font-mono uppercase tracking-wider text-cyan-400 mb-3">Operating Systems</h3>
+          <ul class="space-y-1.5 text-sm text-gray-200 list-disc list-inside">
+            <li>Ubuntu Linux</li>
+            <li>Red Hat Linux</li>
+            <li>Solaris</li>
+          </ul>
         </div>
 
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-purple-400/25 p-6">
-          <h3 class="text-lg font-bold text-white mb-3">Promise Keeper: Trust-Fueled Success Beyond Dollars</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            &ldquo;Where trust is valued, and promises are sacred, success takes precedence over mere
-            monetary gains in my journey.&rdquo;
-          </p>
+        <div class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-purple-400/25 p-6 hover:border-purple-400/50 transition-all">
+          <h3 class="text-sm font-mono uppercase tracking-wider text-purple-300 mb-3">Configuration Management</h3>
+          <ul class="space-y-1.5 text-sm text-gray-200 list-disc list-inside">
+            <li>Ansible</li>
+            <li>Terraform</li>
+          </ul>
         </div>
 
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-cyan-400/25 p-6">
-          <h3 class="text-lg font-bold text-white mb-2">Global Harmony Advocate</h3>
-          <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-2">Yaadhum Oore Yaavarum Kelir</p>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            Wholeheartedly embracing a Purananuru perspective, &ldquo;I am a world citizen. Every citizen
-            is my own kith and kin.&rdquo;
-          </p>
+        <div class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-cyan-400/25 p-6 hover:border-cyan-400/50 transition-all">
+          <h3 class="text-sm font-mono uppercase tracking-wider text-cyan-400 mb-3">Dev Ecosystems</h3>
+          <ul class="space-y-1.5 text-sm text-gray-200 list-disc list-inside">
+            <li>AWS</li>
+            <li>Git</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+          </ul>
         </div>
 
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-purple-400/25 p-6">
-          <h3 class="text-lg font-bold text-white mb-3">Zero Tolerance Towards Any Hatred</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            &ldquo;I stand against all discrimination. From gender to color, race to caste, varna to
-            linguistic differences, culture to nationality, and religion to sexual preference &mdash; I
-            champion a world where inclusivity triumphs over prejudice.&rdquo;
-          </p>
+        <div class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-purple-400/25 p-6 hover:border-purple-400/50 transition-all">
+          <h3 class="text-sm font-mono uppercase tracking-wider text-purple-300 mb-3">Programming Languages</h3>
+          <ul class="space-y-1.5 text-sm text-gray-200 list-disc list-inside">
+            <li>Python</li>
+            <li>C</li>
+            <li>Go</li>
+          </ul>
         </div>
 
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-cyan-400/25 p-6">
-          <h3 class="text-lg font-bold text-white mb-3">Knowledge Unchained</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            In my professional ethos, I firmly believe that knowledge is meant to be shared, not locked
-            away in a vault. Sharing not only enriches others but also refines our mastery, making it
-            irrational not to contribute to the collective pool of wisdom.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-white/5 backdrop-blur-md border border-purple-400/25 p-6">
-          <h3 class="text-lg font-bold text-white mb-3">Do the Right Thing</h3>
-          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-            &ldquo;As a firm believer in following one&apos;s conscience, my professional ethos revolves
-            around a dedicated commitment to doing justice to the job. It&apos;s a journey where passion
-            and purpose intertwine, creating a harmonious blend of fulfillment.&rdquo;
-          </p>
+        <div class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-cyan-400/25 p-6 hover:border-cyan-400/50 transition-all md:col-span-2">
+          <h3 class="text-sm font-mono uppercase tracking-wider text-cyan-400 mb-3">Scripting Languages</h3>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-sm text-gray-200 list-disc list-inside">
+            <li>Bash</li>
+            <li>Ksh</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-20 border-t border-cyan-400/10">
-      <div class="max-w-3xl mx-auto">
-        <div class="relative group">
-          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500/30 to-purple-600/30 blur-lg opacity-60 pointer-events-none"></div>
-          <div class="relative rounded-2xl bg-black/80 backdrop-blur-lg border border-cyan-400/30 p-8 sm:p-10 text-center">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-mono uppercase tracking-widest bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 mb-4">
-              Connect &amp; Collaborate
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience" class="py-16 border-t border-cyan-400/10">
+      <div class="mb-10">
+        <p class="text-xs font-mono uppercase tracking-widest text-purple-300 mb-2">Career Path</p>
+        <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          Professional Experience
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Infobell IT -->
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-cyan-400/30 p-6 sm:p-7 hover:border-cyan-400/60 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Lead Engineer</h3>
+              <p class="text-cyan-400 font-medium text-sm">Infobell IT, Bangalore • Client: IBM</p>
+            </div>
+            <span class="inline-block w-fit px-3 py-1 rounded-full text-xs font-mono bg-cyan-400/15 border border-cyan-400/35 text-cyan-300">
+              December 2025 – Present
             </span>
-            <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-3">
-              Get in touch
-            </h2>
-            <p class="text-gray-300 text-base sm:text-lg mb-8">
-              Feel free to drop your emails. Happy to collaborate with you.
-            </p>
+          </div>
+          <ul class="space-y-2 text-sm sm:text-base text-gray-200 list-disc list-inside">
+            <li>Build, automate, and manage OpenShift clusters on IBM Cloud using Terraform and Ansible to ensure reliable hosting for enterprise applications.</li>
+            <li>Spearhead zero-downtime OpenShift cluster upgrades and maintenance using Ansible-driven automation pipelines.</li>
+            <li>Configure and manage node-level settings, Machine Config Pools (MCP), MachineSets, and Pod Disruption Budgets (PDB) to guarantee high availability, dynamic scaling, and stability for containerized workloads.</li>
+            <li>Utilize Red Hat Advanced Cluster Management (RHACM) and Git for efficient multi-cluster management, version control, and streamlined deployments.</li>
+          </ul>
+        </article>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left mb-8">
-              <div class="rounded-xl bg-white/5 border border-cyan-400/20 p-4">
-                <p class="text-xs font-mono uppercase tracking-wider text-gray-400">Who and Where</p>
-                <p class="text-white font-semibold mt-1">Sathya sheelan J</p>
-                <p class="text-gray-300 text-sm">Chennai, India</p>
-              </div>
-
-              <div class="rounded-xl bg-white/5 border border-purple-400/20 p-4">
-                <p class="text-xs font-mono uppercase tracking-wider text-gray-400">Email</p>
-                <a href="mailto:sathyasheelan.gnu@gmail.com" class="text-cyan-300 hover:text-cyan-200 font-medium text-sm sm:text-base break-all block mt-1">
-                  sathyasheelan.gnu@gmail.com
-                </a>
-              </div>
+        <!-- HCL Technologies -->
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-purple-400/30 p-6 sm:p-7 hover:border-purple-400/60 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Technical Lead</h3>
+              <p class="text-purple-300 font-medium text-sm">HCL Technologies, Chennai • Client: IBM - Cloud</p>
             </div>
+            <span class="inline-block w-fit px-3 py-1 rounded-full text-xs font-mono bg-purple-400/15 border border-purple-400/35 text-purple-300">
+              August 2022 – Present
+            </span>
+          </div>
+          <ul class="space-y-2 text-sm sm:text-base text-gray-200 list-disc list-inside">
+            <li>Working as part of a twelve-member DevOps team on the HostOS project on IBM Cloud, utilizing Linux, Python, Kubernetes, Travis, Jenkins, and Ansible for automation and ensuring system stability.</li>
+            <li>Involved in Linux security fixes, audits, and implementation of OS monitoring tools to maintain high system reliability.</li>
+            <li>Regularly addressed USN (Ubuntu Security Notices) vulnerabilities and LSN (Linux Security Notices) fixes, ensuring all hypervisors were promptly secured against potential threats.</li>
+            <li>Handled configuration management on nodes to perform system-level administration, applying CIS benchmark fixes for compliance and security hardening.</li>
+          </ul>
+        </article>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="mailto:sathyasheelan.gnu@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-black bg-gradient-to-r from-cyan-400 to-purple-500 hover:opacity-95 transition-all">
-                Send an Email
+        <!-- Fidelity Investments -->
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-cyan-400/25 p-6 sm:p-7 hover:border-cyan-400/55 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">System Engineer</h3>
+              <p class="text-cyan-400 font-medium text-sm">Fidelity Investments, Chennai</p>
+            </div>
+            <span class="inline-block w-fit px-3 py-1 rounded-full text-xs font-mono bg-cyan-400/15 border border-cyan-400/35 text-cyan-300">
+              September 2017 – August 2022
+            </span>
+          </div>
+          <ul class="space-y-2 text-sm sm:text-base text-gray-200 list-disc list-inside">
+            <li>Delivered round-the-clock technical support for Linux servers, enhancing customer experience and ensuring high system availability.</li>
+            <li>Oversaw system builds, upgrades, and migrations, maintaining smooth service delivery with minimal downtime.</li>
+            <li>Collaborated with vendors for hardware and software support, including failover clustering and VMware ESX configurations.</li>
+          </ul>
+        </article>
+
+        <!-- Mindtree Ltd -->
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-purple-400/25 p-6 sm:p-7 hover:border-purple-400/55 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Junior System Engineer</h3>
+              <p class="text-purple-300 font-medium text-sm">Mindtree Ltd, Chennai • Shared Services</p>
+            </div>
+            <span class="inline-block w-fit px-3 py-1 rounded-full text-xs font-mono bg-purple-400/15 border border-purple-400/35 text-purple-300">
+              September 2014 – August 2017
+            </span>
+          </div>
+          <ul class="space-y-2 text-sm sm:text-base text-gray-200 list-disc list-inside">
+            <li>Supported both production and non-production environments, troubleshooting Linux and Solaris servers within the &ldquo;Shared Services&rdquo; project.</li>
+            <li>Managed server builds, incident resolution, and data migration activities to ensure seamless operations.</li>
+            <li>Implemented shell scripting automation to improve administrative efficiency and reduce manual effort.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES, RECOGNITION & EDUCATION -->
+    <section id="credentials" class="py-16 border-t border-cyan-400/10">
+      <div class="mb-10">
+        <p class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">Credentials &amp; Background</p>
+        <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          Certificates, Recognition &amp; Education
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-cyan-400/25 p-6">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-mono bg-cyan-400/15 border border-cyan-400/35 text-cyan-300 mb-4">
+            Certification
+          </span>
+          <h3 class="text-lg font-bold text-white mb-2">RedHat Certified Specialist</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Ansible Automation — Credential ID: <span class="font-mono text-cyan-300">190-045-831</span>
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-yellow-400/35 p-6">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-mono bg-yellow-400/15 border border-yellow-400/40 text-yellow-300 mb-4">
+            Recognition
+          </span>
+          <h3 class="text-lg font-bold text-white mb-2">&ldquo;You have earned it-Team award&rdquo; &mdash; Fidelity India</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Recognized for team effort during a crisis causing email backups in the OMA site due to a
+            network issue. Worked round the clock to mitigate the issue and restore service and
+            infrastructure back to normal, avoiding a potential impact 3, appreciated by onsite
+            partners and senior management.
+          </p>
+        </article>
+
+        <article class="rounded-2xl bg-white/[0.04] backdrop-blur-md border border-purple-400/30 p-6">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-mono bg-purple-400/15 border border-purple-400/35 text-purple-300 mb-4">
+            Education
+          </span>
+          <h3 class="text-lg font-bold text-white mb-1">Bachelor of Engineering, Computer Science</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Sathyabama University, Chennai, India
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 border-t border-cyan-400/10">
+      <div class="relative group max-w-4xl mx-auto">
+        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500/25 to-purple-600/25 blur-lg opacity-60 pointer-events-none"></div>
+        <div class="relative rounded-2xl bg-black/80 backdrop-blur-lg border border-cyan-400/30 p-6 sm:p-10">
+          <p class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2 text-center">Contact</p>
+          <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-8 text-center">
+            Get in Touch
+          </h2>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm mb-8">
+            <li class="rounded-xl bg-white/[0.04] border border-cyan-400/20 p-4">
+              <span class="block text-xs font-mono uppercase text-gray-400">Location</span>
+              <span class="block text-white font-semibold mt-1">Chennai, India</span>
+            </li>
+            <li class="rounded-xl bg-white/[0.04] border border-purple-400/20 p-4">
+              <span class="block text-xs font-mono uppercase text-gray-400">Phone</span>
+              <a href="tel:+918939877429" class="block text-purple-200 hover:text-white font-mono font-medium mt-1">
+                +91-8939877429
               </a>
-              <button id="copy-email-btn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-cyan-300 bg-white/5 border border-cyan-400/35 hover:bg-cyan-400/10 transition-all cursor-pointer">
-                Copy Email
-              </button>
-            </div>
+            </li>
+            <li class="rounded-xl bg-white/[0.04] border border-cyan-400/20 p-4">
+              <span class="block text-xs font-mono uppercase text-gray-400">Email</span>
+              <a href="mailto:sathyasheelan.gnu@gmail.com" class="block text-cyan-300 hover:text-cyan-200 font-medium break-all mt-1">
+                sathyasheelan.gnu@gmail.com
+              </a>
+            </li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:sathyasheelan.gnu@gmail.com" class="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold text-black bg-gradient-to-r from-cyan-400 to-purple-500 hover:opacity-95 transition-all text-center">
+              Send an Email
+            </a>
+            <button id="copy-email-btn" type="button" class="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold text-cyan-300 bg-white/5 border border-cyan-400/35 hover:bg-cyan-400/10 transition-all cursor-pointer">
+              Copy Email
+            </button>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-cyan-400/15 bg-black/80 backdrop-blur-md">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-      <p>© 2026 <span class="text-gray-200 font-medium">Sathya sheelan J</span> • Chennai, India</p>
-      <a href="#about" class="text-cyan-400 hover:text-cyan-300 font-medium">Back to top ↑</a>
+  <footer class="border-t border-cyan-400/15 bg-black/85">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+      <p>Sathya Sheelan J &bull; Chennai, India &bull; sathyasheelan.gnu@gmail.com</p>
+      <a href="#about" class="text-cyan-400 hover:text-cyan-300 font-medium">Back to top &uarr;</a>
     </div>
   </footer>
 
@@ -376,22 +351,19 @@
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-      mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+      menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
       });
     }
 
     const copyBtn = document.getElementById("copy-email-btn");
     if (copyBtn) {
       copyBtn.addEventListener("click", async () => {
-        const email = "sathyasheelan.gnu@gmail.com";
         try {
-          await navigator.clipboard.writeText(email);
+          await navigator.clipboard.writeText("sathyasheelan.gnu@gmail.com");
         } catch (_) {}
-        copyBtn.textContent = "✓ Copied to Clipboard!";
+        copyBtn.textContent = "✓ Copied Email!";
         setTimeout(() => {
           copyBtn.textContent = "Copy Email";
         }, 2500);
